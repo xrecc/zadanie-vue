@@ -1,5 +1,16 @@
-# Vue 3 + TypeScript + Vite
+Zadanie z Vue 3 (z Vuex) z TypeScriptem w Vite
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Dependencies:
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+axios - (^1.10.0) - MIT - https://www.npmjs.com/package/axios
+gh-pages - (^6.3.0) - MIT - https://www.npmjs.com/package/gh-pages
+vue - (^3.5.17) - MIT - https://www.npmjs.com/package/vue
+vuex - (4.0.2) - MIT - https://www.npmjs.com/package/vuex
+
+devDependecnies:
+
+@vitejs/plugin-vue - (^6.0.0) - MIT - https://www.npmjs.com/package/@vitejs/plugin-vue  
+@vue/tsconfig - (^0.7.0) - MIT - https://www.npmjs.com/package/@vue/tsconfig  
+typescript - (~5.8.3) - Apache-2.0 - https://www.npmjs.com/package/typescript  
+vite - (^7.0.0) - MIT - https://www.npmjs.com/package/vite  
+vue-tsc - (^2.2.10) - MIT - https://www.npmjs.com/package/vue-tsc

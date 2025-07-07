@@ -49,7 +49,7 @@ const users = computed<Users[]>(() => store.getters["users/allUsers"]);
 
 <template>
   <div class="card">
-    <h1>Posty:</h1>
+    <h1>Posty</h1>
     <div class="page-buttons-div">
       <button
         class="pages-btn"
@@ -84,34 +84,32 @@ const users = computed<Users[]>(() => store.getters["users/allUsers"]);
         Na koniec
       </button>
     </div>
-    <div>
+    <div class="page-cards">
       <div v-for="post in postsPag" :key="post.id">
-        <div>
-          <div class="post-style">
-            <p>
-              <strong>Post nr. {{ post.id }}</strong>
+        <div class="post-style">
+          <p>
+            <strong>Post nr. {{ post.id }}</strong>
+          </p>
+          <p><strong> Tytuł:</strong> {{ post.title }}</p>
+          <br />
+          <p class="post-text">
+            <strong>Treść:</strong> {{ expandedText(post) }}
+            <a @click="onClickExpand(post.id)">
+              {{ post.id === textID ? "Zwiń" : "Rozwiń" }}</a
+            >
+          </p>
+          <br />
+          <div v-for="user in users" :key="user.id">
+            <p v-if="user.id === post.userId">
+              <strong>Imię i nazwisko:</strong> {{ user.name }}
             </p>
-            <p><strong> Tytuł:</strong> {{ post.title }}</p>
-            <br />
-            <p class="post-text">
-              <strong>Treść:</strong> {{ expandedText(post) }}
-              <a @click="onClickExpand(post.id)">
-                {{ post.id === textID ? "Zwiń" : "Rozwiń" }}</a
-              >
-            </p>
-            <br />
-            <div v-for="user in users" :key="user.id">
-              <p v-if="user.id === post.userId">
-                <strong>Imię i nazwisko:</strong> {{ user.name }}
-              </p>
-            </div>
-            <button class="remove-btn" @click="onRemove(post.id)">
-              Usuń post
-            </button>
           </div>
+          <button class="remove-btn" @click="onRemove(post.id)">
+            Usuń post
+          </button>
         </div>
       </div>
-      <div class="page-manipulation-div">
+      <div class="page-buttons-div">
         <button
           class="pages-btn"
           @click="currentPage = 1"

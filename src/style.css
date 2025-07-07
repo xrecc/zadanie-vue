@@ -52,6 +52,8 @@ button:focus-visible {
 }
 
 .card {
+  width: 80lvh;
+  text-align: center;
   padding: 2em;
 }
 
@@ -78,11 +80,11 @@ button:focus-visible {
 .post-style {
   text-align: left;
   background-color: rgb(27, 27, 27);
-  font-size: 20px;
-  margin: 10px;
-  padding: 30px;
+  font-size: 1.25rem;
+  margin: 0.5rem;
+  padding: 2rem;
   box-shadow: 0px 0px 20px 0px rgb(226, 132, 220);
-  width: 70lvh;
+
   transition: 0.5s ease-in-out;
 }
 .post-style:hover {
@@ -91,7 +93,7 @@ button:focus-visible {
 
 .page-buttons-div {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 0.5rem;
   justify-content: center;
   margin-top: 1rem;
@@ -99,8 +101,9 @@ button:focus-visible {
 }
 
 .pages-btn {
-  flex: 1 1 120px;
-  margin: 5px;
+  flex: 1 1 0;
+  margin: 0.3rem;
+  white-space: nowrap;
   color: aliceblue;
   background-color: rgb(27, 27, 27);
   transition: 0.5s ease-in;
@@ -124,8 +127,8 @@ button:focus-visible {
 }
 
 .page-number-style {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .remove-btn {
