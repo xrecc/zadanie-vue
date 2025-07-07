@@ -36,7 +36,7 @@ export interface UsersState {
   data: Users[];
 }
 
-export default <Module<UsersState, IndexState>>{
+export default {
   namespaced: true,
   state: {
     data: [] as Users[],
@@ -57,4 +57,4 @@ export default <Module<UsersState, IndexState>>{
       state.data = users;
     },
   },
-};
+} as Module<UsersState, IndexState>;

@@ -13,7 +13,7 @@ export interface PostsState {
   data: Posts[];
 }
 
-export default <Module<PostsState, IndexState>>{
+export default {
   namespaced: true,
   state: {
     data: [] as Posts[],
@@ -52,4 +52,4 @@ export default <Module<PostsState, IndexState>>{
       state.data = state.data.filter((data) => data.id !== id);
     },
   },
-};
+} as Module<PostsState, IndexState>;

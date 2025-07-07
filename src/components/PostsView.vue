@@ -9,7 +9,6 @@ import type { IndexState } from "../store/index.ts";
 const currentPage = ref(1);
 const textID = ref<number | null>(null);
 const pageSize = ref(10);
-const textSize = ref(50);
 
 const totalPages = computed<number>(() =>
   Math.ceil(posts.value.length / pageSize.value)
