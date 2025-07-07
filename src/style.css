@@ -89,27 +89,17 @@ button:focus-visible {
   transform: scale(1.01);
 }
 
-.page-manipulation-div {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-.page-number-style {
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.remove-btn {
-  color: rgb(218, 98, 98);
-  border: 1px solid rgb(218, 98, 98);
-  transition: 0.5s ease-in;
-}
-.remove-btn:hover {
-  color: white;
-  background-color: rgb(243, 91, 91);
+.page-buttons-div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .pages-btn {
+  flex: 1 1 120px;
   margin: 5px;
   color: aliceblue;
   background-color: rgb(27, 27, 27);
@@ -131,4 +121,19 @@ button:focus-visible {
   border-color: inherit;
   cursor: not-allowed;
   pointer-events: none;
+}
+
+.page-number-style {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.remove-btn {
+  color: rgb(218, 98, 98);
+  border: 1px solid rgb(218, 98, 98);
+  transition: 0.5s ease-in;
+}
+.remove-btn:hover {
+  color: white;
+  background-color: rgb(243, 91, 91);
 }

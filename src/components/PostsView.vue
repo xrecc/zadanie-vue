@@ -50,7 +50,7 @@ const users = computed<Users[]>(() => store.getters["users/allUsers"]);
 <template>
   <div class="card">
     <h1>Posty:</h1>
-    <div class="page-manipulation-div">
+    <div class="page-buttons-div">
       <button
         class="pages-btn"
         @click="currentPage = 1"
