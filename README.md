@@ -2,10 +2,10 @@ Zadanie z Vue 3 (z Vuex) z TypeScriptem w Vite
 
 Dependencies:
 
-axios - (^1.10.0) - MIT - https://www.npmjs.com/package/axios
-gh-pages - (^6.3.0) - MIT - https://www.npmjs.com/package/gh-pages
-vue - (^3.5.17) - MIT - https://www.npmjs.com/package/vue
-vuex - (4.0.2) - MIT - https://www.npmjs.com/package/vuex
+axios - (^1.10.0) - MIT - https://www.npmjs.com/package/axios  
+gh-pages - (^6.3.0) - MIT - https://www.npmjs.com/package/gh-pages  
+vue - (^3.5.17) - MIT - https://www.npmjs.com/package/vue  
+vuex - (4.0.2) - MIT - https://www.npmjs.com/package/vuex  
 
 devDependecnies:
 
