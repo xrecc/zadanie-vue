@@ -24,9 +24,8 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
+
   place-items: center;
-  min-width: 320px;
   min-height: 100vh;
 }
 
@@ -52,7 +51,7 @@ button:focus-visible {
 }
 
 .card {
-  width: 80lvh;
+  width: min(90vw, 900px);
   text-align: center;
   padding: 2em;
 }
@@ -74,6 +73,12 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media (max-width: 600px) {
+  #app {
+    padding: 0rem;
   }
 }
 
@@ -101,7 +106,7 @@ button:focus-visible {
 }
 
 .pages-btn {
-  flex: 1 1 0;
+  flex: 1 1 120px;
   margin: 0.3rem;
   white-space: nowrap;
   color: aliceblue;
@@ -127,8 +132,10 @@ button:focus-visible {
 }
 
 .page-number-style {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  flex: 1 1 100px;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .remove-btn {

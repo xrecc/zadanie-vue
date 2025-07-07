@@ -1,4 +1,4 @@
-Zadanie z Vue 3 (z Vuex) z TypeScriptem w Vite
+Zadanie z Vue 3 (z Vuex) i TypeScriptem + Vite
 
 Dependencies:
 

@@ -48,41 +48,44 @@ const users = computed<Users[]>(() => store.getters["users/allUsers"]);
 </script>
 
 <template>
-  <div class="card">
+  <div v-if="posts.length > 0" class="card">
     <h1>Posty</h1>
     <div class="page-buttons-div">
-      <button
-        class="pages-btn"
-        @click="currentPage = 1"
-        :disabled="currentPage === 1"
-      >
-        Na początek
-      </button>
-      <button
-        class="pages-btn"
-        @click="currentPage--"
-        :disabled="currentPage === 1"
-      >
-        Poprzednia strona
-      </button>
-
+      <div>
+        <button
+          class="pages-btn"
+          @click="currentPage = 1"
+          :disabled="currentPage === 1"
+        >
+          Na początek
+        </button>
+        <button
+          class="pages-btn"
+          @click="currentPage--"
+          :disabled="currentPage === 1"
+        >
+          Poprzednia strona
+        </button>
+      </div>
       <span class="page-number-style"
         >{{ currentPage }} / {{ totalPages }}</span
       >
-      <button
-        class="pages-btn"
-        @click="currentPage++"
-        :disabled="currentPage === totalPages"
-      >
-        Następna strona
-      </button>
-      <button
-        class="pages-btn"
-        @click="currentPage = totalPages"
-        :disabled="currentPage === totalPages"
-      >
-        Na koniec
-      </button>
+      <div>
+        <button
+          class="pages-btn"
+          @click="currentPage++"
+          :disabled="currentPage === totalPages"
+        >
+          Następna strona
+        </button>
+        <button
+          class="pages-btn"
+          @click="currentPage = totalPages"
+          :disabled="currentPage === totalPages"
+        >
+          Na koniec
+        </button>
+      </div>
     </div>
     <div class="page-cards">
       <div v-for="post in postsPag" :key="post.id">
@@ -110,39 +113,43 @@ const users = computed<Users[]>(() => store.getters["users/allUsers"]);
         </div>
       </div>
       <div class="page-buttons-div">
-        <button
-          class="pages-btn"
-          @click="currentPage = 1"
-          :disabled="currentPage === 1"
-        >
-          Na początek
-        </button>
-        <button
-          class="pages-btn"
-          @click="currentPage--"
-          :disabled="currentPage === 1"
-        >
-          Poprzednia strona
-        </button>
-
+        <div>
+          <button
+            class="pages-btn"
+            @click="currentPage = 1"
+            :disabled="currentPage === 1"
+          >
+            Na początek
+          </button>
+          <button
+            class="pages-btn"
+            @click="currentPage--"
+            :disabled="currentPage === 1"
+          >
+            Poprzednia strona
+          </button>
+        </div>
         <span class="page-number-style"
           >{{ currentPage }} / {{ totalPages }}</span
         >
-        <button
-          class="pages-btn"
-          @click="currentPage++"
-          :disabled="currentPage === totalPages"
-        >
-          Następna strona
-        </button>
-        <button
-          class="pages-btn"
-          @click="currentPage = totalPages"
-          :disabled="currentPage === totalPages"
-        >
-          Na koniec
-        </button>
+        <div>
+          <button
+            class="pages-btn"
+            @click="currentPage++"
+            :disabled="currentPage === totalPages"
+          >
+            Następna strona
+          </button>
+          <button
+            class="pages-btn"
+            @click="currentPage = totalPages"
+            :disabled="currentPage === totalPages"
+          >
+            Na koniec
+          </button>
+        </div>
       </div>
     </div>
   </div>
+  <div v-else class="card">Brak postów do wyświetlenia</div>
 </template>

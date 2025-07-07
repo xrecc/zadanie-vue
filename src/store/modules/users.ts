@@ -46,10 +46,14 @@ export default {
   },
   actions: {
     async fetchUsers({ commit }) {
-      const response = await axios.get<Users[]>(
-        "https://jsonplaceholder.typicode.com/users"
-      );
-      commit("SET_USERS", await response.data);
+      try {
+        const response = await axios.get<Users[]>(
+          "https://jsonplaceholder.typicode.com/users"
+        );
+        commit("SET_USERS", await response.data);
+      } catch (error) {
+        console.error("Fetching error", error);
+      }
     },
   },
   mutations: {
